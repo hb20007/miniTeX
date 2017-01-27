@@ -1,0 +1,44 @@
+/* The recipe was taken from this website: http://turmericsaffron.blogspot.ae/2010/09/joojeh-kabab-persian-grilled-saffron.html */
+
+\begin{document}
+
+\pagesetup{20, 60}
+\tabsize(3)
+\title{"Persian Grilled Saffron Chicken Recipe"}
+\author{"hb20007"}
+\date{04/01/2017}
+
+\section{"Introduction"}
+\paragraph{"Persian grilled saffron chicken (joojeh kebab) is usually made with skinless and boneless chicken breast. Let the chicken marinate overnight for the best result. Grilled saffron chicken is usually served right off the grill with aromatic rice, grilled tomatoes and onions."}
+
+\newline
+
+\section{"Ingredients"}
+\paragraph{"Serves 4"}
+\newline
+\begin{itemize}
+\item{"2 pounds skinless, boneless chicken breasts, preferably fresh"}
+\item{"1 medium onion, grated "}
+\item{"1 cup plain whole milk yogurt"}
+\item{"3-4 tablespoons extra virgin olive oil"}
+\item{"3-4 tablespoons freshly squeezed lime juice"}
+\item{"1 teaspoon powdered saffron dissolved in 2-3 tablespoons of hot water"}
+\item{"2 teaspoons salt"}
+\item{"1 teaspoon black pepper"}
+\item{"A pinch of red pepper powder (optional)"}
+\end{itemize}
+
+\newline
+
+\section{"Method"}
+\begin{enumerate}
+\item{"In a bowl combine the yogurt, onion, olive oil, lime juice, liquid saffron, salt and pepper. Blend well into a smooth mixture, adjust the seasoning with lime juice and salt and pepper."}
+\item{"Pour the mixture over the chicken in a large bowl, making sure that all the pieces are fully covered with the sauce. Cover with plastic wrap and refrigerate for 6-8 hours."}
+\item{"Thread the chicken pieces onto metal skewers, place the skewers on the hot grill and continue grilling until chicken pieces are well cooked.  "}
+\end{enumerate}
+
+\newline
+
+\paragraph{"Enjoy the meal!"}
+
+\end{document}
