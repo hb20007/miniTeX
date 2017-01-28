@@ -39,4 +39,4 @@ Open cmd and navigate to the directory with the miniTeX files. Then execute the 
   	  miniTeX ExampleSourceFile.txt output.txt
 ```
 
-If using LINUX, in `makefile` replace `flex` with `lex` and `bison` with yacc. Also use `make` instead of `nmake` in the command line.
+If using LINUX, in `makefile` replace `flex` with `lex` and `bison` with `yacc`. Also use `make` instead of `nmake` in the command line.
