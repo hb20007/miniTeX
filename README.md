@@ -35,8 +35,8 @@ It is assumed that the environment variables for Flex, Bison and GCC are configu
 Open cmd and navigate to the directory with the miniTeX files. Then execute the following commands:
 
 ```
-      flex miniTeX.l
-      bison -dl -o y.tab.c miniTeX.y
-      gcc lex.yy.c y.tab.c -o miniTeX
-  	  miniTeX.exe ExampleSourceFile.txt output.txt
+      nmake
+  	  miniTeX ExampleSourceFile.txt output.txt
 ```
+
+If using LINUX, in `makefile` replace `flex` with `lex` and `bison` with yacc. Also use `make` instead of `nmake` in the command line.
