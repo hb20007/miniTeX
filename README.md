@@ -34,7 +34,7 @@ It is assumed that the environment variables for Flex, Bison and GCC are configu
 
 Open cmd and navigate to the directory with the miniTeX files. Then execute the following commands:
 
-```
+```sh
       nmake # generate miniTeX.exe
 	  nmake clean # delete auto-generated files
   	  miniTeX ExampleSourceFile.txt output.txt
