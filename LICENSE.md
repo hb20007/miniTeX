@@ -1,5 +1,5 @@
 # MIT License
-**Copyright &copy; &lt; 2017 &lt; hb20007**
+**Copyright &copy; 2017 hb20007**
 
 * * *
 
