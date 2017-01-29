@@ -43,3 +43,11 @@ Open cmd and navigate to the directory with the miniTeX files. Then execute the 
 The commands above are for the Windows command-line interpreter.
 
 If using Bash instead, in `makefile` replace every instance of `flex` with `lex`, `bison` with `yacc` and `del` with `rm`. Then use `make` as opposed to `nmake` in the command line.
+
+## 6. Meta
+
+H. Z. Sababa - hb20007 - hzsababa@outlook.com
+
+Distributed under the MIT license. See `LICENSE.md` for more information.
+
+https://github.com/hb20007
