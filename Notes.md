@@ -10,13 +10,13 @@ NOTES
 * It is not assumed that properties should be at the beginning of a line or that two
 properties cannot be on the same line.
 
-* It is also not assumed that \begin{document} should be on the first line of the file
-or that \end{document} should be at the end of file even though \begin{document}
-and \end{document} should be the first and last token respectively. This provides
+* It is also not assumed that `\begin{document}` should be on the first line of the file
+or that `\end{document}` should be at the end of file even though `\begin{document}`
+and `\end{document}` should be the first and last token respectively. This provides
 for more flexibility.
 
 * Whitespace is totally ignored between tokens. Also integers are allowed to be
-preceded by 0. So \pagesetup{2,5} and \pagesetup { 2, 05 } are the same. However,
+preceded by 0. So `\pagesetup{2,5}` and `\pagesetup { 2, 05 }` are the same. However,
 there cannot be a space between the backslash and the property name.
 
 * When the page number is printed, an empty line is printed before and after it as
@@ -34,12 +34,12 @@ and semantic errors.
 * Most of the other lexical and syntax errors were dealt with using
 Flex/Bison functionality exclusively. Lexical errors are caught by Flex when
 matching the regex expressions. Syntax errors are caught by Bison when applying
-the tokens to the BNF grammar. The line %option debug in my .l file means Flex
+the tokens to the BNF grammar. The line `%option debug` in my `.l` file means Flex
 will print to the console in detail the tokens it has parsed as well as any
 unexpected input along with the line number and what it was expecting. Semantic
 errors were dealt with using C functions to validate the user input
 
-* C-style /* ... */ comments can be included in the source files and will be ignored 
+* C-style `/* ... */` comments can be included in the source files and will be ignored 
 by the compiler.
 
 
@@ -110,7 +110,7 @@ STRING: \".*\"
 
 ## 3. Implementation Notes ##
 
-* In the initial stages of my program I had a separate token for the backslash.
+* In the initial stages of my program I had a separate token for `\`.
 However in some cases this leads to the parser requiring a two-token lookahead to
 determine where properties end. I dealt with this problem by removing the
 backslash token altogether and including the backslash as part of the property
@@ -130,8 +130,8 @@ code to require that the document properties are given in a certain order. The
 extensive checks for document properties in my code are a remnant of the earlier
 stages where I allowed them to be inserted in an arbitrary order.
 
-* Due to my flexible description of a string (.* in regex), a token like \tabsize(5)
-would be parsed entirely as a string as opposed to being broken down to \tabsize, (
-and ) because of the rule that the longest pattern matched is chosen. I dealt with
+* Due to my flexible description of a string (`.*` in regex), a token like `\tabsize(5)`
+would be parsed entirely as a string as opposed to being broken down to `\tabsize`, `(`
+and `)` because of the rule that the longest pattern matched is chosen. I dealt with
 this problem without resorting to a more restrictive definition for a string by
-requiring that all strings are enclosed by “ ”.
+requiring that all strings are enclosed by `“ ”`.
