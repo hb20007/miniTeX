@@ -2,7 +2,8 @@
 # Makefile for miniTeX
 #
 # Compiler: GCC
-# Other requirements: Flex, Bison (Replace flex with lex and bison with yacc in the makefile if using LINUX)
+# Other requirements: Flex, Bison
+# (Replace every instance of flex with lex, bison with yacc and del with rm in the makefile if using LINUX)
 # 
 miniTeX: y.tab.o lex.yy.o
 	gcc lex.yy.c y.tab.c -o miniTeX
@@ -20,7 +21,9 @@ lex.yy.c: miniTeX.l
 	flex miniTeX.l
 
 clean:
-	rm *.o
+	del *.o
+	del *.c
+	del y.tab.h
 
 #target: dependencies
 #	action

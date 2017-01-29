@@ -35,8 +35,11 @@ It is assumed that the environment variables for Flex, Bison and GCC are configu
 Open cmd and navigate to the directory with the miniTeX files. Then execute the following commands:
 
 ```
-      nmake
+      nmake # generate miniTeX.exe
+	  nmake clean # delete auto-generated files
   	  miniTeX ExampleSourceFile.txt output.txt
 ```
 
-If using LINUX, in `makefile` replace `flex` with `lex` and `bison` with `yacc`. Also use `make` instead of `nmake` in the command line.
+The commands above are for the Windows command-line interpreter.
+
+If using Bash instead, in `makefile` replace every instance of `flex` with `lex`, `bison` with `yacc` and `del` with `rm`. Then use `make` as opposed to `nmake` in the command line.
