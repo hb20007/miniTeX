@@ -7,7 +7,8 @@
 #
  
 miniTeX: y.tab.o lex.yy.o
-	gcc lex.yy.c y.tab.c -o miniTeX
+	gcc lex.yy.o y.tab.o -o miniTeX
+# We finally link the .o files using the C compiler. This is the whole point. The .o files are updated only when the dependencies change.
 
 y.tab.o: y.tab.c y.tab.h
 	gcc -c y.tab.c
