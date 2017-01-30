@@ -27,7 +27,7 @@ The instructions below are for the GCC C compiler.
 	  
 The example input file is `ExampleSourceFile.txt` and the output file is `output1.txt`.
 
-It is assumed that environment variables for make, Flex, Bison and GCC are configured correctly and that the programs can be called from within the command prompt.
+It is assumed that environment variables for make, Flex, Bison and GCC are configured correctly and that the programs can be called from within the command line.
 
 **Linux & macOS:**
 
