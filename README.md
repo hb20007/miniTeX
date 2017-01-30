@@ -21,41 +21,46 @@ miniTeX is a simple text formatting language intended to illustrate the basics o
 
 My code is written in **C11**. I have made use of the _Flex_ and _Bison_ tools for lexical analysis and parser generation.
 
-
-## 4. Operating System
-
-miniTeX compiles and works correctly on Windows 10 with Flex 2.5.4a using the GCC 6.3 C compiler. It should also work on other platforms and with other versions of Flex even though I haven't confirmed that by testing.
-
-## 5. List of files
-
-The following files should be in the miniTeX folder:
->      1. miniTeX.l
->      2. miniTeX.y
->      3. miniTeX.h
->      4. ExampleSourceFile.txt
-
-
-## 6. Installation instructions
+## 4. Installation instructions
 
 The instructions below are for the GCC C compiler.
 	  
-The input file is `ExampleSourceFile.txt` and the output file is `output1.txt`.
+The example input file is `ExampleSourceFile.txt` and the output file is `output1.txt`.
 
-It is assumed that the environment variables for Flex, Bison and GCC are configured correctly and that the programs can be called from within the command prompt.
+It is assumed that environment variables for make, Flex, Bison and GCC are configured correctly and that the programs can be called from within the command prompt.
 
-Open cmd and navigate to the directory with the miniTeX files. Then execute the following commands:
+**Linux & macOS:**
+
+Use the shell to navigate to the miniTeX directory then execute the following commands...
 
 ```sh
-      nmake # generate miniTeX.exe
-	  nmake clean # delete auto-generated files
+      make # generate miniTeX.exe
+	  make clean # delete auto-generated files
   	  miniTeX ExampleSourceFile.txt output.txt
 ```
 
-The commands above are for the Windows command-line interpreter.
+**Windows:**
 
-If using Bash instead, in `makefile` replace every instance of `flex` with `lex`, `bison` with `yacc` and `del` with `rm`. Then use `make` as opposed to `nmake` in the command line.
+The makefile runs shell commands. This is not supported by Microsoft's "nmake" nor by MinGW's make. Make sure that you use MSYS's make instead.
 
-## 7. Meta
+( To download MSYS visit http://www.mingw.org/wiki/MSYS )
+
+Open cmd and navigate to the directory with the miniTeX files then execute the following commands...
+
+```sh
+      make # generate miniTeX.exe
+	  make clean # delete auto-generated files
+  	  miniTeX ExampleSourceFile.txt output.txt
+```
+
+## 5. Release history
+
+* 1.1
+    * Made miniTeX cross-platform
+* 1.0
+    * The first proper release
+
+## 6. Meta
 
 H. Z. Sababa - hb20007 - hzsababa@outlook.com
 

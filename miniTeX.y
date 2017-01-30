@@ -1,3 +1,12 @@
+/**
+* miniTeX.y
+* yacc source file
+*
+* @author hb20007
+*/
+
+/* DECLARATIONS */
+
 %{
 	#include <stdio.h>
 	#include <stdlib.h> // For free() and exit()
@@ -224,6 +233,8 @@
 
 %%
 
+/* RULES */
+
 file: beginDocument docProperties textProperties endDocument
 			{ 
 			    addLineNumberToLastPage();
@@ -385,6 +396,8 @@ newlineProperty: NEWLINE
 endDocument: END LBRACE DOCUMENT RBRACE;
 
 %%
+
+/* ROUTINES */
 
 int yywrap(void) {
 	return 1;

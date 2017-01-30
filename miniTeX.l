@@ -1,3 +1,12 @@
+/**
+* miniTeX.l
+* lex source file
+*
+* @author hb20007
+*/
+
+/* DEFINTIONS */
+
 %{
 	#include <string.h> // For strdup()
 	#include "y.tab.h"
@@ -60,6 +69,8 @@ enumerate return ENUMERATE;
 . yyerror("invalid character");
 
 %%
+
+/* C CODE SECTION */
 
 int main(int argc, char *argv[]) {
 	if ( argc != 3)
