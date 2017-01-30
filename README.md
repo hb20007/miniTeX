@@ -11,11 +11,11 @@ miniTeX is a simple text formatting language intended to illustrate the basics o
 
 **Example source file:**
 
-![](Examples\ExampleSourceScreenshot.png)
+![](Examples/ExampleSourceScreenshot.png)
 
 **Corresponding output file:**
 
-![](Examples\ExampleOutputScreenshot.png)
+![](Examples/ExampleOutputScreenshot.png)
 
 ## 3. Language
 
