@@ -1,4 +1,4 @@
-# ![](Resources/miniTeXicon.png) miniTeX
+# ![](Resources/miniTeX.png) miniTeX
 
 ***
 								
