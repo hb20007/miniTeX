@@ -1,4 +1,4 @@
-# miniTeX
+![](Resources/miniTeX.png) # miniTeX
 
 ***
 								
