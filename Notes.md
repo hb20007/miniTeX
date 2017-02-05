@@ -40,7 +40,7 @@ unexpected input along with the line number and what it was expecting. Semantic
 errors were dealt with using C functions to validate the user input
 
 * C-style `/* ... */` comments can be included in the source files and will be ignored 
-by the compiler.
+by the compiler. This is roughly equivelent to using % to write comments in LaTeX.
 
 * The whole text of a paragraph must be on the same line in the source file.
 
