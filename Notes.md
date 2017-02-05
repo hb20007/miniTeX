@@ -44,6 +44,8 @@ by the compiler.
 
 * The whole text of a paragraph must be on the same line in the source file.
 
+* miniTeX commands are case-sensitive, just like LaTeX commands.
+
 
 ## 2. BNF Grammar ##
 
