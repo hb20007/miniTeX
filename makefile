@@ -9,10 +9,12 @@
 # To download MSYS make on Windows see: http://www.mingw.org/wiki/MSYS 
 #
 
-PROGRAM_NAME=miniTeX
-CC=gcc
+PROGRAM_NAME = miniTeX
+CC = gcc
 LEX = flex
 YACC = bison -dl
+
+.PHONY: clean
 
 #uname_S is set to the user's OS
 ifeq ($(OS),Windows_NT)
