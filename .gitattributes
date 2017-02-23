@@ -1,0 +1,6 @@
+#
+# .gitattributes for miniTeX
+#
+
+$ miniTeX .gitattributes
+miniTeX/Doc/* linguist-documentation

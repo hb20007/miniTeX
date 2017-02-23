@@ -1,10 +1,8 @@
 /**
-* miniTeX.h
-* Header file for miniTeX
-*
+* @file miniTeX.h
 * @author hb20007
+* @brief Header file for miniTeX
 */
-
 
 	/* Integers related to user-defined document properties and keeping track of sections and enumerated list items */
 	extern int tabSize, linesPerPage, charsPerLine, lineNumberOnPage, pageNumber, sectionCount, currentEnumeratedListItem;
