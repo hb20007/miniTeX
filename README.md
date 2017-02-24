@@ -1,6 +1,6 @@
 # ![](Resources/miniTeXicon.png) miniTeX
 
-***
+> Simple, didactic TeX
 								
 ## 1. About
 
