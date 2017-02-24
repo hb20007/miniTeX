@@ -1,4 +1,5 @@
 *.exe
 *.o
 *.c
+*.dox
 y.tab.h

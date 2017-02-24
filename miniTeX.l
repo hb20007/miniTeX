@@ -1,11 +1,6 @@
 /**
 * @author hb20007
 * @brief lex source file for miniTeX
-*
-*! \mainpage Description
-* miniTeX is a simple text formatting language intended to demonstrate the idea of languages such as TeX.
-* \section sec_credits Credits
-* H. Z. Sababa (hb20007) https://github.com/hb20007
 */
 
 /* DEFINITIONS */
