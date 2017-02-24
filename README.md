@@ -1,13 +1,11 @@
 # ![](Resources/miniTeXicon.png) miniTeX
 
 > Simple, didactic TeX
-								
-## 1. About
 
 miniTeX is a simple text formatting language intended to illustrate the basics of languages such as TeX. This repository contains the code for the compiler of the language. The grammar can be found in `Notes.md`.
 
 
-## 2. Usage example
+## 1. Usage example
 
 **Example source file:**
 
@@ -17,11 +15,11 @@ miniTeX is a simple text formatting language intended to illustrate the basics o
 
 ![](Examples/ExampleOutputScreenshot.png)
 
-## 3. Language
+## 2. Language
 
 My code is written in **C11**. I have made use of the _Flex_ and _Bison_ tools for lexical analysis and parser generation.
 
-## 4. Installation instructions
+## 3. Installation instructions
 
 The instructions below are for the GCC C compiler.
 	  
@@ -53,14 +51,14 @@ Open cmd and navigate to the directory with the miniTeX files then execute the f
   	  miniTeX ExampleSourceFile.txt output.txt
 ```
 
-## 5. Release history
+## 4. Release history
 
 * 1.1
     * Made miniTeX cross-platform
 * 1.0
     * The first proper release
 
-## 6. Meta
+## 5. Meta
 
 H. Z. Sababa - hb20007 - hzsababa@outlook.com
 
