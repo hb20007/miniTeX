@@ -37,9 +37,11 @@ extern char* date;
 * When this is true, we are in enumeration mode and any list items will be considered as an enumerate list instead of bullet points
 */
 extern bool enumerateFlag;
-	
-// extern const int cannot be used because in C const means 'read-only' as opposed to constant.	
-#define NUMBER_OF_DOC_PROPERTIES 5
+
+/** 
+* @brief Self-explanatory. A problem with Doxygen causes this to be documented twice.
+*/	
+#define NUMBER_OF_DOC_PROPERTIES 5 // extern const int cannot be used because in C const means 'read-only' as opposed to constant.	
 	
 /** 
 * @brief An array of the document property counters
