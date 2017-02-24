@@ -1,5 +1,4 @@
 /**
-* @file miniTeX.y
 * @author hb20007
 * @brief yacc source file for miniTeX
 */

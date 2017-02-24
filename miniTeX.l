@@ -1,5 +1,4 @@
 /**
-* @file miniTeX.l
 * @author hb20007
 * @brief lex source file for miniTeX
 *

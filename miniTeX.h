@@ -1,5 +1,4 @@
 /**
-* @file miniTeX.h
 * @author hb20007
 * @brief Header file for miniTeX
 */
