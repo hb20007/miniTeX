@@ -1,4 +1,5 @@
 /**
+* @file miniTeX.l
 * @author hb20007
 * @brief lex source file for miniTeX
 */
@@ -70,6 +71,12 @@ enumerate return ENUMERATE;
 
 /* C CODE SECTION */
 
+/**
+* @brief Main function
+* @param argc Count of the command line arguments
+* @param argv An argument array of the command line arguments
+* @return An integer 0 upon exit success
+*/
 int main(int argc, char *argv[]) {
 	if ( argc != 3)
 		printf("ERROR: You need 2 args, inputFileName and outputFileName"); // yyerror() is not used because no line number needs to be displayed

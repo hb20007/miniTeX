@@ -1,4 +1,5 @@
 /**
+* @file miniTeX.y
 * @author hb20007
 * @brief yacc source file for miniTeX
 */
@@ -32,7 +33,7 @@
 	
 	bool enumerateFlag;
 	
-	int docPropertyCounters[5];
+	int docPropertyCounters[NUMBER_OF_DOC_PROPERTIES];
 	
 	static inline char *stringFromDocPropertyEnum(const document_property indexOfProperty) { // There is no extern prototype for this method in the header because extern and static cannot be used together
 		static char *strings[] = { "\\pagesetup{}", "\\tabsize()", "\\title{}", "\\author{}", "\\date{}"};
@@ -397,10 +398,18 @@ endDocument: END LBRACE DOCUMENT RBRACE;
 
 /* ROUTINES */
 
+/**
+* @brief Required function for flex
+* @return 1
+*/
 int yywrap(void) {
 	return 1;
 }
 
+/**
+* @brief Bison error reporting function
+* @param str Pointer to the error string
+*/
 void yyerror(const char* str) 
 {
     fprintf(stderr,"SYNTAX ERROR near line [%d]: %s\n", yylineno, str);
