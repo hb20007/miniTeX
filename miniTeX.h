@@ -34,6 +34,7 @@ extern char* date;
 	
 /** 
 * @brief Flag for enumeration/bullet points mode
+*
 * When this is true, we are in enumeration mode and any list items will be considered as an enumerate list instead of bullet points
 */
 extern bool enumerateFlag;
@@ -45,6 +46,7 @@ extern bool enumerateFlag;
 	
 /** 
 * @brief An array of the document property counters
+*
 * An array with counters of how many times each of the document properties appears in the input file. The order of the properties is defined in the enum below
 */
 extern int docPropertyCounters[NUMBER_OF_DOC_PROPERTIES];
@@ -71,6 +73,7 @@ extern void dealWithDocPropertyErrors();
 
 /**
 * @brief Validates the integer passed in as one the arguments
+*
 * Validates the integer passed in as an argument against the limits provided. Uses the description argument to print an error.
 *
 * @param toValidate The integer to be validated
@@ -95,6 +98,7 @@ extern void printPageNumber();
 
 /**
 * @brief Called when we reach the end of a page
+*
 * Prints the page number, increments it and resets the line number
 */
 extern void actionIfReachedEndOfPage();
@@ -120,6 +124,7 @@ extern int charArraySize(const char* str);
 	
 /**
 * @brief Called on a new line
+*
 * Prints a new line, increments the number of lines on current page, performs appropriate action if the end of page has been reached
 */
 extern void newLineActions();
