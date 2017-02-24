@@ -14,7 +14,7 @@ CC = gcc
 LEX = flex
 YACC = bison -dl
 
-.PHONY: clean
+# .PHONY: clean
 
 #uname_S is set to the user's OS
 ifeq ($(OS),Windows_NT)
