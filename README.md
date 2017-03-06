@@ -60,7 +60,7 @@ Open cmd and navigate to the directory with the miniTeX files then execute the f
 
 ## 5. Meta
 
-H. Z. Sababa - hb20007 - hzsababa@outlook.com
+H. Z. Sababa &mdash; hb20007 &mdash; hzsababa@outlook.com
 
 Distributed under the MIT license. See `LICENSE.md` for more information.
 
