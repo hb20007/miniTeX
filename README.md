@@ -32,9 +32,9 @@ It is assumed that environment variables for make, Flex, Bison and GCC are confi
 Use the shell to navigate to the miniTeX directory then execute the following commands...
 
 ```sh
-      make # generate miniTeX.exe
-	  make clean # delete auto-generated files
-  	  miniTeX ExampleSourceFile.txt output.txt
+make # generate miniTeX.exe
+make clean # delete auto-generated files
+miniTeX ExampleSourceFile.txt output.txt
 ```
 
 **Windows:**
