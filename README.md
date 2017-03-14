@@ -46,9 +46,9 @@ The makefile runs shell commands. This is not supported by Microsoft's "nmake" n
 Open cmd and navigate to the directory with the miniTeX files then execute the following commands...
 
 ```sh
-      make # generate miniTeX.exe
-	  make clean # delete auto-generated files
-  	  miniTeX ExampleSourceFile.txt output.txt
+make # generate miniTeX.exe
+make clean # delete auto-generated files
+miniTeX ExampleSourceFile.txt output.txt
 ```
 
 ## 4. Release history
