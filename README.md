@@ -1,4 +1,4 @@
-[![Release](http://github-release-version.herokuapp.com/github/hb20007/miniTeX/release.png](https://github.com/hb20007/miniTeX/releases)
+[![Release](http://github-release-version.herokuapp.com/github/hb20007/miniTeX/release.png)](https://github.com/hb20007/miniTeX/releases)
 
 # ![](Resources/miniTeXicon.png) miniTeX
 
