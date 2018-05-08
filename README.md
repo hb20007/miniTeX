@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/hb20007/greek-dialect-classifier/master)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hb20007/cpp-programs/blob/master/LICENSE.md)
 [![Release](https://img.shields.io/github/release/hb20007/miniTeX.svg)](https://github.com/hb20007/miniTeX/releases/latest)
 
 # ![](Resources/miniTeXicon.png) miniTeX
