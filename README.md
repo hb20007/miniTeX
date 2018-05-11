@@ -59,12 +59,4 @@ miniTeX ExampleSourceFile.txt output.txt
 * 1.1
     * Made miniTeX cross-platform
 * 1.0
-    * The first proper release
-
-## 5. Meta
-
-H. Z. Sababa &mdash; hb20007 &mdash; hzsababa@outlook.com
-
-Distributed under the MIT license. See `LICENSE.md` for more information.
-
-https://github.com/hb20007
+    * The first working release
