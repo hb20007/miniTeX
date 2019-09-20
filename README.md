@@ -1,22 +1,22 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hb20007/cpp-programs/blob/master/LICENSE.md)
 [![Release](https://img.shields.io/github/release/hb20007/miniTeX.svg)](https://github.com/hb20007/miniTeX/releases/latest)
 
-# ![](Resources/miniTeXicon.png) miniTeX
+# ![](resources/miniTeXicon.png) miniTeX
 
 > Simple, didactic TeX
 
-miniTeX is a simple text formatting language intended to illustrate the basics of languages such as TeX. This repository contains the code for the compiler of the language. The grammar can be found in `Notes.md`.
+miniTeX is a simple text formatting language intended to illustrate the basics of languages such as TeX. This repository contains the code for the compiler of the language. The grammar can be found in `notes.md`.
 
 
 ## 1. Usage example
 
 **Example source file:**
 
-![](Examples/ExampleSourceScreenshot.png)
+![](examples/example_source_screenshot.png)
 
 **Corresponding output file:**
 
-![](Examples/ExampleOutputScreenshot.png)
+![](examples/example_output_screenshot.png)
 
 ## 2. Language
 
@@ -25,8 +25,8 @@ My code is written in **C11**. I have made use of the _Flex_ and _Bison_ tools f
 ## 3. Installation instructions
 
 The instructions below are for the GCC C compiler.
-	  
-The example input file is `ExampleSourceFile.txt` and the output file is `output1.txt`.
+
+The example input file is `example_source_file.txt` and the output file is `output1.txt`.
 
 It is assumed that environment variables for make, Flex, Bison and GCC are configured correctly and that the programs can be called from within the command line.
 
