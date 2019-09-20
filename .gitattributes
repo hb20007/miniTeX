@@ -3,5 +3,5 @@
 #
 
 $ miniTeX .gitattributes
-Doc/* linguist-documentation
-Doc/search/* linguist-documentation
+doc/* linguist-documentation
+doc/search/* linguist-documentation
