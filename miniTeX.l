@@ -9,10 +9,10 @@
 %{
 	#include <string.h> // For strdup()
 	#include "y.tab.h"
-	
+
 	void yyerror(const char *);
 	int yylex(void);
-	
+
 	extern FILE *yyout; /* "Connection" with the output file */
 	extern int  yyparse();
 %}
@@ -54,9 +54,9 @@ enumerate return ENUMERATE;
 \\item  	 return ITEM;
 \\newline    return NEWLINE;
 
-(((0[1-9]|[12][0-9]|30)[-\/ ]?(0[13-9]|1[012])|31[-\/ ]?(0[13578]|1[02])|(0[1-9]|1[0-9]|2[0-8])[-\/ ]?02)[-\/ ]?[0-9]{4}|29[-\/ ]?02[-\/ ]?([0-9]{2}(([2468][048]|[02468][48])|[13579][26])|([13579][26]|[02468][048]|0[0-9]|1[0-6])00))	{ yylval.sValue = strdup(yytext); return DDMMYYYYDATE; } /* strdup() is string duplicate. yytext must be copied because of its temporary nature */ 
+(((0[1-9]|[12][0-9]|30)[-\/ ]?(0[13-9]|1[012])|31[-\/ ]?(0[13578]|1[02])|(0[1-9]|1[0-9]|2[0-8])[-\/ ]?02)[-\/ ]?[0-9]{4}|29[-\/ ]?02[-\/ ]?([0-9]{2}(([2468][048]|[02468][48])|[13579][26])|([13579][26]|[02468][048]|0[0-9]|1[0-6])00))	{ yylval.sValue = strdup(yytext); return DDMMYYYYDATE; } /* strdup() is string duplicate. yytext must be copied because of its temporary nature */
 -?[0-9]*[0-9][0-9]*	{ yylval.iValue = atoi(strdup(yytext)); return INTEGER; } /* This also accepts negative integers and 0. */
-\".*\"				{ yylval.sValue = strdup(yytext); return STRING; } 
+\".*\"				{ yylval.sValue = strdup(yytext); return STRING; }
 
 	/* This regex recognizes a C-style comment. There is no action associated since the comment is not passed to the parser. */
 \/\*.*\*\/	;
