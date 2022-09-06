@@ -43,7 +43,7 @@ miniTeX ExampleSourceFile.txt output.txt
 
 The makefile runs shell commands. This is not supported by Microsoft's "nmake" nor by MinGW's make. Make sure that you use MSYS's make instead.
 
-( To download MSYS visit http://www.mingw.org/wiki/MSYS )
+(To download MSYS, visit http://www.mingw.org/wiki/MSYS)
 
 Open cmd and navigate to the directory with the miniTeX files then execute the following commands...
 

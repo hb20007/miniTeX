@@ -2,13 +2,13 @@
 
 ## 1. General Notes
 
-* `\tabsize()` is the only property that uses `()` instead of `{}`
+* `\tabsize()` is the only property that uses `()` instead of `{}`.
 
 * It is not assumed that properties should be at the beginning of a line or that two
 properties cannot be on the same line.
 
 * It is also not assumed that `\begin{document}` should be on the first line of the file
-or that `\end{document}` should be at the end of file even though `\begin{document}`
+or that `\end{document}` should be at the end of the file even though `\begin{document}`
 and `\end{document}` should be the first and last token respectively. This provides
 for more flexibility.
 
@@ -25,7 +25,7 @@ will span lines 34-63 etc.
 hyphen is inserted if the text is cut in the middle of a word.
 
 * The date regex I used is a standard regex for verifying all dates taking into
-consideration leap years. Therefore it covers checking the date for both syntax
+consideration leap years. Therefore, it covers checking the date for both syntax
 and semantic errors.
 
 * Most of the other lexical and syntax errors were dealt with using
@@ -34,7 +34,7 @@ matching the regex expressions. Syntax errors are caught by Bison when applying
 the tokens to the BNF grammar. The line `%option debug` in my `.l` file means Flex
 will print to the console in detail the tokens it has parsed as well as any
 unexpected input along with the line number and what it was expecting. Semantic
-errors were dealt with using C functions to validate the user input
+errors were dealt with using C functions to validate the user input.
 
 * C-style `/* ... */` comments can be included in the source files and will be ignored
 by the compiler. This is roughly equivelent to using % to write comments in LaTeX.
