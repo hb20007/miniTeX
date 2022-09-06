@@ -1,22 +1,21 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hb20007/cpp-programs/blob/master/LICENSE.md)
 [![Release](https://img.shields.io/github/release/hb20007/miniTeX.svg)](https://github.com/hb20007/miniTeX/releases/latest)
 
-# ![](resources/miniTeXicon.png) miniTeX
+# ![miniTeX Icon](resources/miniTeXicon.png) miniTeX
 
 > Simple, didactic TeX
 
-miniTeX is a simple text formatting language intended to illustrate the basics of languages such as TeX. This repository contains the code for the compiler of the language. The grammar can be found in `notes.md`.
-
+miniTeX is a simple text formatting language intended to illustrate the basics of languages such as TeX. This repository contains the code for the compiler of the language. The grammar can be found in [`notes.md`](/notes.md).
 
 ## 1. Usage example
 
 **Example source file:**
 
-![](examples/example_source_screenshot.png)
+![Example source file screenshot](examples/example_source_screenshot.png)
 
 **Corresponding output file:**
 
-![](examples/example_output_screenshot.png)
+![Example output screenshot](examples/example_output_screenshot.png)
 
 ## 2. Language
 
@@ -57,6 +56,6 @@ miniTeX ExampleSourceFile.txt output.txt
 ## 4. Release history
 
 * 1.1
-    * Made miniTeX cross-platform
+  * Made miniTeX cross-platform
 * 1.0
-    * The first working release
+  * The first working release

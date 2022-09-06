@@ -1,9 +1,6 @@
-NOTES
-=====
+# Notes
 
-- - - -
-
-## 1. General Notes ##
+## 1. General Notes
 
 * `\tabsize()` is the only property that uses `()` instead of `{}`
 
@@ -46,8 +43,7 @@ by the compiler. This is roughly equivelent to using % to write comments in LaTe
 
 * miniTeX commands are case-sensitive, just like LaTeX commands.
 
-
-## 2. BNF Grammar ##
+## 2. BNF Grammar
 
 The BNF grammar is provided below in Yacc format for ease of reference with my Bison
 file.
@@ -112,15 +108,15 @@ INTEGER: -?[0-9]*[0-9][0-9]*
 STRING: \".*\"
 ```
 
-## 3. Implementation Notes ##
+## 3. Implementation Notes
 
-* In the initial stages of my program I had a separate token for `\`.
-However in some cases this leads to the parser requiring a two-token lookahead to
+* In the initial stages of my program, I had a separate token for `\`.
+However, in some cases, this leads to the parser requiring a two-token lookahead to
 determine where properties end. I dealt with this problem by removing the
 backslash token altogether and including the backslash as part of the property
 tokens instead.
 
-* In earlier stages of my program I allowed the user to insert the document
+* In earlier stages of my program, I allowed the user to insert the document
 properties in any order as long as they are provided before the text properties. I
 then coded checks to see if a property was left out or if one was entered twice.
 However, this later proved to be infeasible. The checks I mentioned had to take
@@ -138,4 +134,4 @@ stages where I allowed them to be inserted in an arbitrary order.
 would be parsed entirely as a string as opposed to being broken down to `\tabsize`, `(`
 and `)` because of the rule that the longest pattern matched is chosen. I dealt with
 this problem without resorting to a more restrictive definition for a string by
-requiring that all strings are enclosed by `“ ”`.
+requiring that all strings are enclosed by `" "`.
