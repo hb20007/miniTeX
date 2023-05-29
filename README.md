@@ -31,7 +31,7 @@ It is assumed that environment variables for make, Flex, Bison and GCC are confi
 
 **Linux & macOS:**
 
-Use the shell to navigate to the miniTeX directory then execute the following commands...
+Use the shell to navigate to the miniTeX directory then execute the following commands…
 
 ```sh
 make # generate miniTeX.exe
@@ -41,11 +41,11 @@ miniTeX ExampleSourceFile.txt output.txt
 
 **Windows:**
 
-The makefile runs shell commands. This is not supported by Microsoft's "nmake" nor by MinGW's make. Make sure that you use MSYS's make instead.
+The makefile runs shell commands. This is not supported by Microsoft’s “nmake” nor by MinGW’s make. Make sure that you use MSYS’s make instead.
 
-(To download MSYS, visit http://www.mingw.org/wiki/MSYS)
+(To download MSYS, visit <https://www.msys2.org/>)
 
-Open cmd and navigate to the directory with the miniTeX files then execute the following commands...
+Open cmd and navigate to the directory with the miniTeX files then execute the following commands…
 
 ```sh
 make # generate miniTeX.exe
