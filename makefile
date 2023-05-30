@@ -6,7 +6,7 @@
 #
 # NB: On Windows, MSYS make must be used. MinGW make and Microsoft's nmake do not support ifeq and the makefile leads to errors. Also rm was used instead of del etc.
 #
-# To download MSYS make on Windows, see http://www.mingw.org/wiki/MSYS
+# To download MSYS make on Windows, see https://www.msys2.org/
 #
 
 PROGRAM_NAME = miniTeX

@@ -3,3 +3,4 @@
 *.c
 *.dox
 y.tab.h
+compile_commands.json
