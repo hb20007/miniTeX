@@ -54,7 +54,7 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
+<iframe src="javascript:void(0)" frameborder="0"
         name="MSearchResults" id="MSearchResults">
 </iframe>
 </div>
@@ -67,7 +67,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><hr/>
 <h2>1. About</h2>
-<p>miniTeX is a simple text formatting language intended to illustrate the basics of languages such as TeX. This repository contains the code for the compiler of the language. The grammar can be found in <code>Notes.md</code>.</p>
+<p>miniTeX is a simple text formatting language intended to illustrate the basics of languages such as TeX. This repository contains the code for the miniTeX compiler. The grammar can be found in <code>Notes.md</code>.</p>
 <h2>2. Usage example</h2>
 <p><b>Example source file:</b></p>
 <div class="image">
@@ -78,17 +78,17 @@ $(function() {
 <img src="../Examples/ExampleOutputScreenshot.png"/>
 </div>
 <h2>3. Language</h2>
-<p>My code is written in <b>C11</b>. I have made use of the <em>Flex</em> and <em>Bison</em> tools for lexical analysis and parser generation.</p>
+<p>My code is written in <b>C</b>. I use <em>Flex</em> and <em>Bison</em> for lexical analysis and parser generation.</p>
 <h2>4. Installation instructions</h2>
 <p>The instructions below are for the GCC C compiler.</p>
 <p>The example input file is <code>ExampleSourceFile.txt</code> and the output file is <code>output1.txt</code>.</p>
-<p>It is assumed that environment variables for make, Flex, Bison and GCC are configured correctly and that the programs can be called from within the command line.</p>
+<p>It is assumed that environment variables for make, Flex, Bison and GCC are correctly configured and that the programs can be called from the command line.</p>
 <p><b>Linux &amp; macOS:</b></p>
-<p>Use the shell to navigate to the miniTeX directory then execute the following commands...</p>
+<p>Use the shell to navigate to the miniTeX directory then execute the following commands:</p>
 <div class="fragment"><div class="line">make # generate miniTeX.exe</div><div class="line">make clean # delete auto-generated files</div><div class="line">miniTeX ExampleSourceFile.txt output.txt</div></div><!-- fragment --><p><b>Windows:</b></p>
 <p>The makefile runs shell commands. This is not supported by Microsoft's "nmake" nor by MinGW's make. Make sure that you use MSYS's make instead.</p>
-<p>( To download MSYS visit <a href="http://www.mingw.org/wiki/MSYS">http://www.mingw.org/wiki/MSYS</a> )</p>
-<p>Open cmd and navigate to the directory with the miniTeX files then execute the following commands...</p>
+<p>(To download MSYS visit <a href="http://www.mingw.org/wiki/MSYS">http://www.mingw.org/wiki/MSYS</a>.)</p>
+<p>Open Command Prompt and navigate to the directory with the miniTeX files then execute the following commands:</p>
 <div class="fragment"><div class="line">make # generate miniTeX.exe</div><div class="line">make clean # delete auto-generated files</div><div class="line">miniTeX ExampleSourceFile.txt output.txt</div></div><!-- fragment --><h2>5. Release history</h2>
 <ul>
 <li>1.1<ul>
@@ -100,10 +100,6 @@ $(function() {
 </ul>
 </li>
 </ul>
-<h2>6. Meta</h2>
-<p>H. Z. Sababa - hb20007 - <a href="#" onclick="location.href='mai'+'lto:'+'hzs'+'ab'+'aba'+'@o'+'utl'+'oo'+'k.c'+'om'; return false;">hzsab<span style="display: none;">.nosp@m.</span>aba@<span style="display: none;">.nosp@m.</span>outlo<span style="display: none;">.nosp@m.</span>ok.c<span style="display: none;">.nosp@m.</span>om</a></p>
-<p>Distributed under the MIT license. See <code>LICENSE.md</code> for more information.</p>
-<p><a href="https://github.com/hb20007">https://github.com/hb20007</a> </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -4,7 +4,7 @@
 * @brief Header file for miniTeX
 */
 
-// (Below is a member group in doxygen syntax.)
+// (Below is a member group in Doxygen syntax.)
 
 //@{
 /** @name Integers related to user-defined document properties and keeping track of sections and enumerated list items */
@@ -26,40 +26,41 @@ extern const int MIN_CHARS_PER_LINE;
 //@}
 
 //@{
-/** @name The title, author and date of the document are stored in these variables */
+/** @name The title, author, and date of the document are stored in these variables. */
 extern char* title;
 extern char* author;
 extern char* date;
 //@}
 
 /**
-* @brief Flag for enumeration/bullet points mode
+* @brief Flag for enumeration or bullet points mode
 *
-* When this is true, we are in enumeration mode and any list items will be considered as an enumerate list instead of bullet points.
+* When this is true, we are in enumeration mode, and any list items will be considered as an enumerated list instead of bullet points.
 */
 extern bool enumerateFlag;
 
 /**
-* @brief Self-explanatory. A problem with Doxygen causes this to be documented twice.
+* @brief A problem with Doxygen causes this to be documented twice.
 */
-#define NUMBER_OF_DOC_PROPERTIES 5 // extern const int cannot be used because in C const means 'read-only' as opposed to constant.
+#define NUMBER_OF_DOC_PROPERTIES 5 // extern const int cannot be used because in C, const means 'read-only' as opposed to constant.
 
 /**
 * @brief An array of the document property counters
 *
-* An array with counters of how many times each of the document properties appears in the input file. The order of the properties is defined in the enum below.
+* An array with counters for how many times each of the document properties appears in the input file. The order of the properties is defined in the enum below.
 */
 extern int docPropertyCounters[NUMBER_OF_DOC_PROPERTIES];
 
 /**
-* @brief An enumerated list with the 5 document properties. A problem with Doxygen causes the elements to be duplicated in the documentation.
+* @brief An enumerated list of the five document properties. A problem with Doxygen causes the elements to be duplicated in the documentation.
 */
-typedef enum {PAGE_SETUP,	/**< "\pagesetup{}" */
-			  TAB_SIZE,		/**< "\tabsize()" */
-			  DOC_TITLE,	/**< "\title{}" */
-			  DOC_AUTHOR,	/**< "\author{}" */
-			  DOC_DATE		/**< "\date{}" */
-			  } document_property; // This is fully defined here; that's why there is no extern keyword (it can't be used with this).
+typedef enum {
+  PAGE_SETUP, /**< "\pagesetup{}" */
+  TAB_SIZE,   /**< "\tabsize()" */
+  DOC_TITLE,  /**< "\title{}" */
+  DOC_AUTHOR, /**< "\author{}" */
+  DOC_DATE    /**< "\date{}" */
+} document_property; // This is fully defined here; therefore, the extern keyword cannot be used with this.
 
 /**
 * @brief Prints spaces depending on the tab size
@@ -81,7 +82,12 @@ extern void dealWithDocPropertyErrors();
 * @param lowerLimit The lower bound of the valid range
 * @param upperLimit The upper bound of the valid range
 */
-extern void validateInteger(const int toValidate, const char description[], const int lowerLimit, const int upperLimit);
+extern void validateInteger(
+  const int toValidate,
+  const char description[],
+  const int lowerLimit,
+  const int upperLimit
+);
 
 /**
 * @brief Returns the number of digits of the integer passed in
@@ -92,7 +98,7 @@ extern int numberOfDigits(const int num);
 
 /**
 * @brief Prints the page number center-aligned
-* @note Also prints spaces after the page number on the same line. They are not really required but it looks nicer.
+* @note Also prints spaces after the page number on the same line for better presentation.
 */
 extern void printPageNumber();
 
@@ -104,7 +110,7 @@ extern void printPageNumber();
 extern void actionIfReachedEndOfPage();
 
 /**
-* @brief Removes first and last character of the string passed "by reference"
+* @brief Removes the first and last character of the string passed "by reference"
 * @param string The string
 */
 extern void removeFirstAndLastChar(char** string);
@@ -125,14 +131,14 @@ extern int charArraySize(const char* str);
 /**
 * @brief Called on a new line
 *
-* Prints a new line, increments the number of lines on current page, performs appropriate action if the end of page has been reached
+* Prints a new line, increments the number of lines on the current page, and performs an appropriate action if the end of the page has been reached
 */
 extern void newLineActions();
 
 /**
-* @brief Prints the string inserted as an argument in the output file center-aligned
+* @brief Prints the string inserted as an argument in the output file, center-aligned
 * @param s The string
-* @note Also prints spaces after the string on the same line. They are not really required but it looks nicer.
+* @note Also prints spaces after the string on the same line for better presentation.
 */
 extern void printCenterAligned(const char* s);
 
@@ -140,17 +146,17 @@ extern void printCenterAligned(const char* s);
 * @brief Prints the string argument left-aligned
 * @param s The string
 * @param charsUsed Allows the function to take into account any characters on the current line already used
-* @note Also prints spaces after the string on the same line. They are not really required but it looks nicer.
+* @note Also prints spaces after the string on the same line for better presentation.
 */
 extern void printLeftAligned(const char* s, const int charsUsed);
 
 /**
-* @brief Prints the title, author and date in the center by calling @code printCenterAligned() @endcode
+* @brief Prints the title, author, and date in the center by calling @code printCenterAligned() @endcode
 */
 extern void printDocumentProperties();
 
 /**
-* @brief Prints new lines until we are at the end of the page and then prints the line number in the center
+* @brief Prints new lines until we are at the end of the page, and then prints the line number in the center
 */
 extern void addLineNumberToLastPage();
 

@@ -4,7 +4,7 @@
 # Compiler: GCC
 # Other requirements: Flex, Bison
 #
-# NB: On Windows, MSYS make must be used. MinGW make and Microsoft's nmake do not support ifeq and the makefile leads to errors. Also rm was used instead of del etc.
+# NB: On Windows, MSYS make must be used. MinGW make and Microsoft's nmake do not support the ifeq directive, causing errors. Moreover, rm was used instead of del, etc.
 #
 # To download MSYS make on Windows, see https://www.msys2.org/
 #
@@ -16,7 +16,7 @@ YACC = bison -dl
 
 # .PHONY: clean
 
-# uname_S is set to the user's OS
+# uname_S is set to the user's OS.
 ifeq ($(OS),Windows_NT)
 	uname_S := Windows
 else
@@ -29,7 +29,7 @@ $(PROGRAM_NAME): y.tab.o lex.yy.o resources
 	cd resources && $(MAKE)
 	$(CC) lex.yy.o y.tab.o winresources.rs -o $(PROGRAM_NAME)
 # For Windows, we execute the make file in the resources directory. winresources.rc was placed in that directory because it is only for Windows and shouldn't be in the parent directory.
-# The 2 commands above are executed in separate shells so no need for "cd ..".
+# The two commands above are executed in separate shells, so there is no need for "cd ..".
 else
 $(PROGRAM_NAME): y.tab.o lex.yy.o
 	$(CC) lex.yy.o y.tab.o -o $(PROGRAM_NAME)

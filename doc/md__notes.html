@@ -54,7 +54,7 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
+<iframe src="javascript:void(0)" frameborder="0"
         name="MSearchResults" id="MSearchResults">
 </iframe>
 </div>
@@ -69,23 +69,23 @@ $(function() {
 <h2>1. General Notes</h2>
 <ul>
 <li><code>\tabsize()</code> is the only property that uses <code>()</code> instead of <code>{}</code></li>
-<li>It is not assumed that properties should be at the beginning of a line or that two properties cannot be on the same line.</li>
-<li>It is also not assumed that <code>\begin{document}</code> should be on the first line of the file or that <code>\end{document}</code> should be at the end of file even though <code>\begin{document}</code> and <code>\end{document}</code> should be the first and last token respectively. This provides for more flexibility.</li>
-<li>Whitespace is totally ignored between tokens. Also integers are allowed to be preceded by 0. So <code>\pagesetup{2,5}</code> and <code>\pagesetup { 2, 05 }</code> are the same. However, there cannot be a space between the backslash and the property name.</li>
-<li>When the page number is printed, an empty line is printed before and after it as well. For a document of 30 lines per page, lines 1-30 will contain the text of page 1. Lines 31 and 33 are empty lines and line 32 contains the page number. Page 2 text will span lines 34-63 etc.</li>
-<li>I have implemented a word wrap feature where text wraps to the next line and a hyphen is inserted if the text is cut in the middle of a word.</li>
-<li>The date regex I used is a standard regex for verifying all dates taking into consideration leap years. Therefore it covers checking the date for both syntax and semantic errors.</li>
-<li>Most of the other lexical and syntax errors were dealt with using Flex/Bison functionality exclusively. Lexical errors are caught by Flex when matching the regex expressions. Syntax errors are caught by Bison when applying the tokens to the BNF grammar. The line <code>option debug</code> in my <code>.l</code> file means Flex will print to the console in detail the tokens it has parsed as well as any unexpected input along with the line number and what it was expecting. Semantic errors were dealt with using C functions to validate the user input</li>
-<li>C-style <code>/* ... */</code> comments can be included in the source files and will be ignored by the compiler. This is roughly equivelent to using % to write comments in LaTeX.</li>
+<li>Each line can contain multiple properties that can appear anywhere in the text.</li>
+<li><code>\begin{document}</code> and <code>\end{document}</code> should be the first and last tokens, but they do not need to appear on the first and last lines of the file.</li>
+<li>Whitespace is totally ignored between tokens, and integers are allowed to be preceded by 0. So <code>\pagesetup{2,5}</code> and <code>\pagesetup { 2, 05 }</code> are the same. However, there cannot be a space between the backslash and the property name.</li>
+<li>When the page number is printed, an empty line is printed before and after it as well. For a document of 30 lines per page, lines 1–30 will contain the text of page 1. Lines 31 and 33 are empty lines, and line 32 contains the page number. Page 2 text will span lines 34–63, and so on.</li>
+<li>I have implemented a word wrap feature that allows text to flow to the next line, and a hyphen is inserted if the text is split in the middle of a word.</li>
+<li>The date regex I used is a standard expression that verifies all possible dates and accounts for leap years. Therefore it covers checking the date for both syntax and semantic errors.</li>
+<li>Most of the other lexical and syntax errors were addressed using Flex/Bison exclusively. Lexical errors are caught by Flex when matching the regular expressions. Syntax errors are caught by Bison when applying the tokens to the BNF grammar. The line <code>option debug</code> in my <code>.l</code> file instructs Flex to print all the tokens it has parsed, as well as any unexpected input, along with the line number and what it was expecting.</li>
+<li>C-style <code>/* ... */</code> comments can be included in the source files and will be ignored by the compiler. This is roughly equivalent to using % to write comments in LaTeX.</li>
 <li>The whole text of a paragraph must be on the same line in the source file.</li>
-<li>miniTeX commands are case-sensitive, just like LaTeX commands.</li>
+<li>Like LaTeX commands, miniTeX commands are case-sensitive.</li>
 </ul>
 <h2>2. BNF Grammar</h2>
 <p>The BNF grammar is provided below in Yacc format for ease of reference with my Bison file.</p>
-<p>Names written in ALL-CAPS are non-terminals defined in terms of a regex expression while those written in camelCase are non-terminals defined in terms of other non-terminals. For the non-terminals written in ALL-CAPS, it was not possible to define them the conventional way (ie. using a | b | c | ... | y | z notation etc.) because some of them are very complex (eg. DDMMYYDATE). Therefore I will define them in terms of terminals with the help of regex.</p>
-<p>My grammar does not lead to any shift/reduce or reduce/reduce conflicts.</p>
+<p>Names written in ALL-CAPS are non-terminals defined in terms of a regular expression, while those written in camelCase are non-terminals defined in terms of other non-terminals. For the non-terminals written in ALL-CAPS, it was not possible to define them the conventional way (i.e., using a | b | c | ... | y | z notation, etc.) because some of them are very complex (e.g., DDMMYYDATE). Therefore, I defined them in terms of terminals using regex.</p>
+<p>My grammar is free of shift/reduce and reduce/reduce conflicts.</p>
 <p>```C file: beginDocument docProperties textProperties endDocument; beginDocument: BEGIN_ LBRACE DOCUMENT RBRACE; docProperties: pageSetupProperty tabSizeProperty titleProperty authorProperty dateProperty; pageSetupProperty: PAGESETUP LBRACE INTEGER COMMA INTEGER RBRACE; tabSizeProperty: TABSIZE LPAREN INTEGER RPAREN; titleProperty: TITLE LBRACE STRING RBRACE; authorProperty: AUTHOR LBRACE STRING RBRACE; dateProperty: DATE LBRACE DDMMYYYYDATE RBRACE; textProperties: textProperties textProperty; textProperty: sectionProperty | paragraphProperty | itemizeProperty | enumerateProperty | newlineProperty; sectionProperty: SECTION LBRACE STRING RBRACE; paragraphProperty: PARAGRAPH LBRACE STRING RBRACE; itemizeProperty: beginItemize itemProperties endItemize; enumerateProperty: beginEnumerate itemProperties endEnumerate; beginItemize: BEGIN_ LBRACE ITEMIZE RBRACE; endItemize: END LBRACE ITEMIZE RBRACE; beginEnumerate: BEGIN_ LBRACE ENUMERATE RBRACE; endEnumerate: END LBRACE ENUMERATE RBRACE; itemProperties: itemProperties itemProperty; itemProperty: ITEM LBRACE STRING RBRACE; newlineProperty: NEWLINE; endDocument: END LBRACE DOCUMENT RBRACE;</p>
-<p>LBRACE: /* (The slash is the escape character. From this point onward I use regex) */ RBRACE: </p>
+<p>LBRACE: /* (The slash represents the escape character. From this point, I use regex.) */ RBRACE: </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
